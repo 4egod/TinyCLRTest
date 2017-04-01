@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+  <TemplateData>
+    <Name>TinyCLR Unit Test</Name>
+    <Description>A project that contains TinyCLR unit tests.</Description>
+    <Icon Package="{52CBD135-1F97-2580-011F-C7CD052E44DE}" ID="531"/>
+    <ProjectType>CSharp</ProjectType>
+    <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+    <SortOrder>2000</SortOrder>
+    <TemplateID>961b68e0-6233-485b-9311-120d2a2b234c</TemplateID>
+    <TemplateGroupID>TinyCLR</TemplateGroupID>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>UnitTestProject</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="ProjectTemplate.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="Properties\AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="true" OpenOrder="0">UnitTest1.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="true" OpenOrder="1">Program.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>NuGet.VisualStudio.Interop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>NuGet.VisualStudio.TemplateWizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <packages repository="extension" repositoryId="GHIElectronics.TinyCLR.VisualStudio">
+      <package id="GHIElectronics.TinyCLR.Core" version="0.2.0" />
+    </packages>
+    <packages repository="extension" repositoryId="TinyCLRTest-0.17.4.1">
+      <package id="TinyCLRTest" version="0.17.4.1" />
+    </packages>
+  </WizardData>
+</VSTemplate>
